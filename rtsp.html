@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsmpeg/0.1/jsmpg.js"></script>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            padding: 0px;
+            margin: 0px;
+            overflow: hidden;
+        }
+
+        canvas {
+            width: 33%;
+            height: 33%;
+            padding: 0px;
+            margin: 0px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="c1"></canvas>
+    <script>
+        var client1 = new WebSocket('ws://localhost:3011');
+        var canvas1 = document.querySelector('#c1');
+        var player1 = new jsmpeg(client1, {
+            canvas: canvas1
+        });
+    </script>
+
+    <canvas id="c2"></canvas>
+    <script>
+        var client2 = new WebSocket('ws://localhost:3012');
+        var canvas2 = document.querySelector('#c2');
+        var player2 = new jsmpeg(client2, {
+            canvas: canvas2
+        });
+    </script>
+
+    <canvas id="c3"></canvas>
+    <script>
+        var client3 = new WebSocket('ws://localhost:3013');
+        var canvas3 = document.querySelector('#c3');
+        var player3 = new jsmpeg(client3, {
+            canvas: canvas3
+        });
+    </script>
+</body>
+
+</html>
