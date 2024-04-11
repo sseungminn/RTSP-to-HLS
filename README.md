@@ -4,3 +4,5 @@
 # 실행
 node app.js
 <br>rtsp.html 웹브라우저 실행
+
+<br>작동 흐름은 CCTV PT.ppt 참조
